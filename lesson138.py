@@ -28,5 +28,16 @@ print(func(10))
 print(func.__closure__)
 print('-'*80)
 
+def power(n):
+    def inner(x):
+        return x ** n
+    return inner
+square = power(2)
+print(square)
+print(square.__closure__)
+print(square(10))
 
+cubes = power(3)
+print(cubes.__closure__)
+print(cubes(2))
 
