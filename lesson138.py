@@ -13,4 +13,9 @@ def outer(a, b):
 func = outer(2, 3)
 print(func)
 print(func.__closure__)
+print('-'*80)
+
+print(func())
+
+
 
