@@ -15,4 +15,22 @@ print(apply(greet, 'John'))
 print('-'*80)
 
 print(apply(lambda a, b, c: a+b+c, 10, 20, 30))
+print('-'*80)
+
+def mult(a, b):
+    return a*b
+
+def power(a, n):
+    return a ** n
+
+def choose_operator(name):
+    if name == 'add':
+        return add
+    if name == 'mult':
+        return mult
+    if name == 'power':
+        return power
+
+op = choose_operator('power')
+print(op)
 
