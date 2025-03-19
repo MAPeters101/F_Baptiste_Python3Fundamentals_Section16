@@ -33,4 +33,11 @@ def choose_operator(name):
 
 op = choose_operator('power')
 print(op)
+print('-'*80)
+print(op(2,3))
+print('-'*80)
+
+
+
+
 
