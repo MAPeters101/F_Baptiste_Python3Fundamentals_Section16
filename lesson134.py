@@ -108,3 +108,18 @@ in_tuple(t, x)
 end = perf_counter()
 print(start - end)
 print('-'*80)
+
+def time_it(func, *args):
+    start = perf_counter()
+    result = func(*args)
+    end = perf_counter()
+    print(f'Elapsed: {start - end}')
+    return result
+
+print(time_it(in_list, l, x))
+print(time_it(in_set, s, x))
+
+
+
+
+
