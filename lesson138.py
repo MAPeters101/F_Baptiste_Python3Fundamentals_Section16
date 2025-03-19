@@ -55,4 +55,23 @@ add_executer = execute(add)
 print(add_executer.__closure__)
 print(hex(id(add)))
 print(add_executer(2, 3))
+print('-'*80)
+
+def execute(func):
+    def inner(*args, **kwargs):
+        result = func(*args, **kwargs)
+        return result
+    return inner
+
+def add(a,b,c):
+    print('add...')
+    return a+b+c
+
+def say_hello(name, *, formal=True):
+    print('say_hello...')
+    if formal:
+        return f'Pleased to meet you, {name}'
+    else:
+        return f'Hi, {name}'
+
 
