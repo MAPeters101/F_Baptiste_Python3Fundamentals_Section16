@@ -74,7 +74,37 @@ print(op(3,4))
 print(op)
 #print(op(2,3,4))
 print(op)
-
 print('='*80)
 
+def in_list(l, element):
+    return element in l
 
+def in_tuple(t, element):
+    return element in t
+
+def in_set(s, element):
+    return element in s
+
+from time import perf_counter
+n = 10_000_000
+l = list(range(n))
+t = tuple(range(n))
+s = set(range(n))
+
+x = 5_000_000
+
+start = perf_counter()
+in_list(l, x)
+end = perf_counter()
+print(start - end)
+
+start = perf_counter()
+in_tuple(t, x)
+end = perf_counter()
+print(start - end)
+
+start = perf_counter()
+in_tuple(t, x)
+end = perf_counter()
+print(start - end)
+print('-'*80)
