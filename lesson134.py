@@ -58,4 +58,23 @@ def choose_operator(name):
 op = choose_operator('mult')
 print(op(3,4))
 print(op)
+print('='*80)
+
+
+def choose_operator(name):
+    if name == 'add':
+        return lambda a, b: a+b
+    if name == 'mult':
+        return lambda a, b: a*b
+    if name == 'power':
+        return lambda a, n: a**n
+
+op = choose_operator('power')
+print(op(3,4))
+print(op)
+#print(op(2,3,4))
+print(op)
+
+print('='*80)
+
 
