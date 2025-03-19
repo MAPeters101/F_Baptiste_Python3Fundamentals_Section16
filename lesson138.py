@@ -72,6 +72,10 @@ def say_hello(name, *, formal=True):
     if formal:
         return f'Pleased to meet you, {name}'
     else:
-        return f'Hi, {name}'
+        return f'Hi, {name}!'
 
+exec_add = execute(add)
+execute_greet = execute(say_hello)
+print(exec_add(1,2,3))
+print(execute_greet('Michael', formal=False))
 
