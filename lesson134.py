@@ -12,4 +12,7 @@ def apply(func, *args):
 
 print(apply(add, 2, 3))
 print(apply(greet, 'John'))
+print('-'*80)
+
+print(apply(lambda a, b, c: a+b+c, 10, 20, 30))
 
