@@ -40,4 +40,19 @@ print(square(10))
 cubes = power(3)
 print(cubes.__closure__)
 print(cubes(2))
+print('-'*80)
+
+def execute(func):
+    def inner(a, b):
+        result = func(a, b)
+        return result
+    return inner
+
+def add(a,b):
+    return a+b
+
+add_executer = execute(add)
+print(add_executer.__closure__)
+print(hex(id(add)))
+print(add_executer(2, 3))
 
