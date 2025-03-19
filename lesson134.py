@@ -38,6 +38,24 @@ print(op(2,3))
 print('-'*80)
 
 
+def choose_operator(name):
+    def add(a, b):
+        return a + b
 
+    def mult(a, b):
+        return a*b
 
+    def power(a, n):
+        return a ** n
+
+    if name == 'add':
+        return add
+    if name == 'mult':
+        return mult
+    if name == 'power':
+        return power
+
+op = choose_operator('mult')
+print(op(3,4))
+print(op)
 
