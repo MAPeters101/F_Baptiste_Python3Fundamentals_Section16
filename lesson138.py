@@ -99,5 +99,22 @@ print(factorial(4))
 print(diagonal_matrix(3, 4, diagonal=-10))
 print('-'*80)
 
+from time import perf_counter
+import sys
+sys.set_int_max_str_digits(100_000)
+start = perf_counter()
+result = factorial(10_000)
+end = perf_counter()
+print(f'elapsed: {end - start}')
+print(f'result = {result}')
+print('-'*80)
+
+start = perf_counter()
+result = diagonal_matrix(10, 10, diagonal=-1)
+end = perf_counter()
+print(f'elapsed: {end - start}')
+print(f'result = {result}')
+print('-'*80)
+
 
 
