@@ -78,4 +78,26 @@ exec_add = execute(add)
 execute_greet = execute(say_hello)
 print(exec_add(1,2,3))
 print(execute_greet('Michael', formal=False))
+print('-'*80)
+
+def factorial(n):
+    prod = 1
+    for i in range(2, n+1):
+        prod *= i
+    return prod
+
+def diagonal_matrix(rows, cols, *, diagonal=1):
+    return [
+        [
+            diagonal if row == col else 0
+            for col in range(cols)
+        ]
+        for row in range(rows)
+    ]
+
+print(factorial(4))
+print(diagonal_matrix(3, 4, diagonal=-10))
+print('-'*80)
+
+
 
