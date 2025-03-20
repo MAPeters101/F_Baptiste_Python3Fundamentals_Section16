@@ -150,3 +150,12 @@ print(timed_fact.__closure__)
 timed_diagonal = time_it(diagonal_matrix)
 print(timed_diagonal.__closure__)
 
+result = timed_fact(5)
+print(result)
+
+result = timed_diagonal(10, 10)
+print(result)
+pprint(result)
+
+
+
