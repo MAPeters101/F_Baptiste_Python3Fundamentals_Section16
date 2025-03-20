@@ -116,5 +116,15 @@ print(f'elapsed: {end - start}')
 print(f'result = {result}')
 print('-'*80)
 
+def time_it(func, *args, **kwargs):
+    start = perf_counter()
+    result = func(*args, **kwargs)
+    end = perf_counter()
+    print(f'elapsed: {end - start}')
+    return result
+
+result = time_it(factorial, 10_000, )
+print(result)
+print('-'*80)
 
 
