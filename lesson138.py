@@ -101,6 +101,8 @@ print('-'*80)
 
 from time import perf_counter
 import sys
+from pprint import pprint
+
 sys.set_int_max_str_digits(100_000)
 start = perf_counter()
 result = factorial(10_000)
@@ -123,8 +125,14 @@ def time_it(func, *args, **kwargs):
     print(f'elapsed: {end - start}')
     return result
 
-result = time_it(factorial, 10_000, )
+result = time_it(factorial, 10_000)
 print(result)
+print('-'*80)
+
+result = time_it(diagonal_matrix, 10, 10, diagonal=-1)
+print(result)
+pprint(result)
+
 print('-'*80)
 
 
