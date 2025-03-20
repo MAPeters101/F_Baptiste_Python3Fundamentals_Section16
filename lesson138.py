@@ -135,4 +135,18 @@ pprint(result)
 
 print('-'*80)
 
+def time_it(func):
+    def inner(*args, **kwargs):
+        start = perf_counter()
+        result = func(*args, **kwargs)
+        end = perf_counter()
+        print(f'elapsed: {end - start}')
+        return result
+    return inner
+
+timed_fact = time_it(factorial)
+print(timed_fact.__closure__)
+
+timed_diagonal = time_it(diagonal_matrix)
+print(timed_diagonal.__closure__)
 
